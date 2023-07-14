@@ -1,0 +1,16 @@
+@font-face {
+    src: url("./fonts/NarzissProCyrillic-Bold.ttf");
+    font-family: Narziss;
+}
+
+:root {
+    --base-color: rgb(84, 84, 84);
+}
+
+body {
+}
+
+#text>span {
+    position: absolute;
+    transform-origin: left 160px;
+}

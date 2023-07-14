@@ -134,7 +134,7 @@ onMounted(() => {
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 100%;
+    width: 50%;
 
     display: flex;
     align-items: center;
@@ -149,10 +149,9 @@ onMounted(() => {
     font-weight: bold;
     position: relative;
     height: 300px;
-    width: 300px;
 
     transform: rotate(180deg);
-    animation: 1s rotate-text 2s 1 linear forwards;
+    animation: 1s rotate-text 1.8s 1 linear forwards;
     transform-origin: center left;
 }
 

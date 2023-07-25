@@ -5,7 +5,7 @@ import {onMounted} from "vue";
 const text = ref(null);
 
 onMounted(() => {
-    const str = '20 августа 2023';
+    const str = '20·августа·2023';
 
     for (let i = 0; i < str.length; i++) {
         let span = document.createElement("span");
@@ -15,28 +15,29 @@ onMounted(() => {
     }
 });
 
-
-
-
 </script>
 
 <template>
-    <div class="logo-position-container">
-        <div class="logo-container">
-            <div class="left-letter letter">
-                <span>A</span>
-            </div>
-            <div class="right-letter letter">
-                <span>K</span>
+    <div>
+        <div class="logo-position-container">
+            <div class="logo-container">
+                <div class="left-letter letter">
+                    <span>A</span>
+                </div>
+                <div class="right-letter letter">
+                    <span>K</span>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="rotate-text-box">
-        <p id="text" ref="text"></p>
+        <div class="rotate-text-box">
+            <p id="text" ref="text"></p>
+        </div>
     </div>
 </template>
 
 <style scoped>
+
+
 
 .logo-position-container {
     position: absolute;
@@ -51,13 +52,6 @@ onMounted(() => {
     font-family: Narziss, serif;
 
     color: var(--base-color);
-}
-
-.logo-container {
-    width: 220px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
 }
 
 .logo-container:after {
@@ -128,42 +122,5 @@ onMounted(() => {
         bottom: 0;
     }
 }
-
-.rotate-text-box {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 50%;
-
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
-}
-
-#text {
-    color: var(--base-color);
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: bold;
-    position: relative;
-    height: 300px;
-
-    transform: rotate(180deg);
-    animation: 1s rotate-text 1.8s 1 linear forwards;
-    transform-origin: center left;
-}
-
-@keyframes rotate-text {
-    from {
-        transform: rotate(180deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
 
 </style>

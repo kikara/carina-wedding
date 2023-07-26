@@ -1,84 +1,123 @@
 <script setup>
-import {ref} from "vue";
-import Fade from "./components/Fade.vue";
-
+const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 </script>
 
 <template>
-    <Transition>
-        <Fade :delay="500" :is-fade="true" :on="1000">
-            <img src="./assets/icons/heart.svg" alt="" width="40">
-        </Fade>
-    </Transition>
+    <div class="center container">
+        <div class="names-header">Artabas & Karina</div>
 
-    <Transition>
-        <Fade :delay="1800">
-            <div class="address">
-                Чемальский тракт, <span style="font-family: Roboto, serif;">4</span> км
+        <div class="text-header">Август 2023</div>
+        <div class="calendar">
+            <table>
+                <tbody>
+                <tr style="text-transform: uppercase;">
+                    <td v-for="day in days" style="padding-bottom: 10px">{{ day }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td v-for="i in 6">{{ i }}</td>
+                </tr>
+                <tr>
+                   <td v-for="i in 7">{{ i + 6}}</td>
+                </tr>
+                <tr>
+                    <td v-for="i in 7" :class="{'target': i === 7}">
+                        <span>{{ i + 13}}</span>
+                        <span v-if="i === 7"><img src="./assets/icons/heart.svg" alt=""></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td v-for="i in 7">{{ i + 20}}</td>
+                </tr>
+                <tr>
+                    <td v-for="i in 4">{{ i + 27}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="text-header" style="margin-top: 10px">Пора веселиться</div>
+        <div class="text-subheader">Приглашаем Вас на нашу свадебную<br> вечеринку</div>
+        <div class="text-header" style="margin-top: 10px;">
+            <div>АВГУСТ 20, 2023</div>
+            <div style="position: relative">
+                <div>15:00</div>
+                <img src="./assets/icons/lines.svg" alt="" width="100" style="position: absolute; bottom: -15px; left: 15%; transform: rotate(8deg)">
             </div>
-        </Fade>
-    </Transition>
-
-    <Transition>
-        <Fade :delay="2800">
-            <div class="title">
-                Пора<br>веселиться
-            </div>
-        </Fade>
-    </Transition>
-
-
-    <div class="names-time-container">
-        <Transition>
-            <Fade :delay="4000">
-                <div class="names">
-                    Артабас & Карина<br>женятся
-                </div>
-            </Fade>
-        </Transition>
-
-        <Transition>
-            <Fade :delay="4800">
-                <div class="time">
-                    20 августа 2023<br>в 15:00
-                </div>
-            </Fade>
-        </Transition>
+        </div>
+        <div class="text-subheader" style="margin-top: 20px">ждем вас по адресу</div>
+        <div class="text-subheader" style="font-size: 18px;position: relative">
+            <span>
+                Чемальский тракт 4 км, 1 <br>Чемальский район
+            </span>
+            <img src="./assets/icons/location.svg" alt="" width="16" style="position: absolute; top: 0; left: -25px;">
+        </div>
     </div>
 
+    <div style="position: absolute; top: 0; left: 0; overflow: hidden; min-height: 100vh; width: 100%; z-index: 2">
+        <img src="./assets/icons/first.svg" alt="" class="first-flower flower" width="200">
+        <img src="./assets/icons/first.svg" alt="" class="second-flower flower" width="200">
+    </div>
 </template>
 
 <style scoped>
-img, .address {
-    position: absolute;
-    top: 10%;
-    right: 10%;
-}
-
-.title {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    text-transform: uppercase;
+.names-header {
+    font-family: Amsterdam, cursive;
+    color: #C99071;
     font-size: 40px;
+    margin-top: 2rem;
 }
-
-.names-time-container {
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calendar, .text-header, .text-subheader {
+    font-family: Fors, serif;
+}
+.calendar {
+    margin-top: 10px;
+    text-align: center;
+}
+.calendar table td {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.calendar table {
+    font-size: 14px;
+}
+.calendar tr {
+    margin-top: 3px;
+}
+.target {
+    position: relative;
+}
+.target img {
     position: absolute;
-    top: 60%;
-    left: 10%;
-    font-size: 25px;
+    top: 0;
+    left: -5px;
+    transform: rotate(30deg);
+}
+.text-header {
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 1s ease;
-    animation: 1s blur;
-    color: transparent;
+.text-header, .text-subheader {
+    color: #545454;
+    text-align: center;
 }
-
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
+.flower {
+    position: absolute;
+}
+.first-flower {
+    left: -76px;
+    bottom: 0;
+    transform: rotate(30deg);
+}
+.second-flower {
+    right: -150px;
+    top: 20%;
+    transform: rotate(30deg);
 }
 </style>

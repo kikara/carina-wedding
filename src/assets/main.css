@@ -3,15 +3,27 @@
     font-family: Narziss;
 }
 
+@font-face {
+    src: url("./fonts/amsterdam-four-slant-ttf.ttf");
+    font-family: Amsterdam;
+}
+@font-face {
+    src: url("./fonts/TT Fors Trial Regular.ttf");
+    font-family: Fors;
+}
+
 :root {
     /*--base-color: #763D80;*/
     --base-color: #000;
 }
 
 body {
-    font-family: Allison, cursive;
     color: var(--base-color);
-    background-color: #faf0e6;
+    background-image: url("./images/s.webp");
+    background-size: 200% 120vh;
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100%;
 }
 
 @keyframes blur {

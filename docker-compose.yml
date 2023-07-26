@@ -1,0 +1,25 @@
+version: '3'
+services:
+    nginx:
+        image: nginx:latest
+        volumes:
+            - ./:/var/www/carina-wedding
+            - ./_docker/nginx/conf.d:/etc/nginx/conf.d/:ro
+        restart: always
+        environment:
+            - VIRTUAL_HOST=akweddingparty.ru/
+            - LETSENCRYPT_HOST=akweddingparty.ru/
+        networks:
+            - proxy
+    app:
+        build:
+            dockerfile: ./_docker/node/Dockerfile
+        volumes:
+            - ./:/var/www/carina-wedding
+        expose:
+            - '4000'
+        tty: true
+networks:
+    proxy:
+        external: true
+        name: nginx-proxy_proxy

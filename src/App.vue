@@ -34,9 +34,14 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
                 </tr>
                 </tbody>
             </table>
+            <img src="./assets/icons/t.png" alt="" width="70" class="heart">
         </div>
-        <div class="text-header" style="margin-top: 10px">Пора веселиться</div>
+        <div class="text-header" style="margin-top: 20px">Пора веселиться</div>
         <div class="text-subheader">Приглашаем Вас на нашу свадебную<br> вечеринку</div>
+    </div>
+
+
+    <div style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
         <div class="text-header" style="margin-top: 10px;">
             <div>АВГУСТ 20, 2023</div>
             <div style="position: relative">
@@ -77,6 +82,12 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 .calendar {
     margin-top: 10px;
     text-align: center;
+    position: relative;
+}
+.calendar .heart {
+    position: absolute;
+    bottom: -30px;
+    right: -35px;
 }
 .calendar table td {
     padding-right: 10px;

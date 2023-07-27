@@ -23,7 +23,7 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
                 <tr>
                     <td v-for="i in 7" :class="{'target': i === 7}">
                         <span>{{ i + 13 }}</span>
-                        <img src="./assets/icons/heart.svg" alt="" v-if="i === 7">
+                        <img src="./assets/icons/heart.svg" alt="" v-if="i === 7" width="58">
                     </td>
                 </tr>
                 <tr>
@@ -116,8 +116,8 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 
 .target img {
     position: absolute;
-    top: 0;
-    left: -5px;
+    top: -5px;
+    left: -8px;
     transform: rotate(30deg);
 }
 

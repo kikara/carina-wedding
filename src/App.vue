@@ -38,12 +38,7 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
         </div>
         <div class="text-header" style="margin-top: 20px">Пора веселиться</div>
         <div class="text-subheader">Приглашаем Вас на нашу свадебную<br> вечеринку</div>
-    </div>
-
-
-    <div
-        style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
-        <div class="text-header" style="margin-top: 10px; font-size: 20px;">
+        <div class="text-header" style="margin-top: 10px; font-size: 18px;">
             <div>АВГУСТ 20, 2023</div>
             <div style="position: relative">
                 <div>15:00</div>
@@ -51,6 +46,11 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
                      style="position: absolute; bottom: -15px; left: 15%; transform: rotate(8deg)">
             </div>
         </div>
+    </div>
+
+
+    <div
+        style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
         <div class="text-subheader" style="margin-top: 20px">ждем вас по адресу</div>
         <div class="text-subheader" style="font-size: 18px;position: relative">
             <span>

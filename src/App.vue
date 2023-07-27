@@ -49,8 +49,7 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
     </div>
 
 
-    <div
-        style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
+    <div class="location">
         <div class="text-subheader" style="margin-top: 20px">ждем вас по адресу</div>
         <div class="text-subheader" style="font-size: 18px;position: relative">
             <span>
@@ -67,6 +66,21 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
 </template>
 
 <style scoped>
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media (min-height: 700px) {
+    .location {
+        position: absolute!important;
+        bottom: 30px;
+        left: 0;
+    }
+}
+
 .names-header {
     font-family: Amsterdam, cursive;
     color: #C99071;

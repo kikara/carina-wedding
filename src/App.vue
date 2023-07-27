@@ -18,19 +18,19 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
                     <td v-for="i in 6">{{ i }}</td>
                 </tr>
                 <tr>
-                   <td v-for="i in 7">{{ i + 6}}</td>
+                    <td v-for="i in 7">{{ i + 6 }}</td>
                 </tr>
                 <tr>
                     <td v-for="i in 7" :class="{'target': i === 7}">
-                        <span>{{ i + 13}}</span>
-                        <span v-if="i === 7"><img src="./assets/icons/heart.svg" alt=""></span>
+                        <span>{{ i + 13 }}</span>
+                        <img src="./assets/icons/heart.svg" alt="" v-if="i === 7">
                     </td>
                 </tr>
                 <tr>
-                    <td v-for="i in 7">{{ i + 20}}</td>
+                    <td v-for="i in 7">{{ i + 20 }}</td>
                 </tr>
                 <tr>
-                    <td v-for="i in 4">{{ i + 27}}</td>
+                    <td v-for="i in 4">{{ i + 27 }}</td>
                 </tr>
                 </tbody>
             </table>
@@ -41,12 +41,14 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
     </div>
 
 
-    <div style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
-        <div class="text-header" style="margin-top: 10px;">
+    <div
+        style="position: absolute; bottom: 30px; left:0;display: flex; flex-direction: column; align-items: center; width: 100%">
+        <div class="text-header" style="margin-top: 10px; font-size: 20px;">
             <div>АВГУСТ 20, 2023</div>
             <div style="position: relative">
                 <div>15:00</div>
-                <img src="./assets/icons/lines.svg" alt="" width="100" style="position: absolute; bottom: -15px; left: 15%; transform: rotate(8deg)">
+                <img src="./assets/icons/lines.svg" alt="" width="100"
+                     style="position: absolute; bottom: -15px; left: 15%; transform: rotate(8deg)">
             </div>
         </div>
         <div class="text-subheader" style="margin-top: 20px">ждем вас по адресу</div>
@@ -54,7 +56,7 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
             <span>
                 Чемальский тракт 4 км, 1 <br>Чемальский район
             </span>
-            <img src="./assets/icons/location.svg" alt="" width="16" style="position: absolute; top: 0; left: -25px;">
+            <img src="./assets/icons/location.svg" alt="" width="16" style="position: absolute; top: 0; left: -22px;">
         </div>
     </div>
 
@@ -71,44 +73,54 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
     font-size: 40px;
     margin-top: 2rem;
 }
+
 .center {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .calendar, .text-header, .text-subheader {
     font-family: Fors, serif;
 }
+
 .calendar {
     margin-top: 10px;
     text-align: center;
     position: relative;
 }
+
 .calendar .heart {
     position: absolute;
     bottom: -30px;
     right: -35px;
 }
+
 .calendar table td {
     padding-right: 10px;
     padding-left: 10px;
     padding-top: 10px;
 }
+
 .calendar table {
     font-size: 14px;
 }
+
 .calendar tr {
     margin-top: 3px;
 }
+
 .target {
     position: relative;
 }
+
 .target img {
     position: absolute;
     top: 0;
     left: -5px;
     transform: rotate(30deg);
 }
+
 .text-header {
     font-size: 22px;
     text-transform: uppercase;
@@ -118,14 +130,17 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
     color: #545454;
     text-align: center;
 }
+
 .flower {
     position: absolute;
 }
+
 .first-flower {
     left: -76px;
     bottom: 0;
     transform: rotate(30deg);
 }
+
 .second-flower {
     right: -150px;
     top: 20%;

@@ -54,9 +54,9 @@ const days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
         <div class="text-subheader" style="margin-top: 20px">ждем вас по адресу</div>
         <div class="text-subheader" style="font-size: 18px;position: relative">
             <span>
-                Чемальский тракт 4 км, 1 <br>Чемальский район
+                Экстрим Парк,<br>Чемальский тракт 4 км,1 <br>Чемальский район
             </span>
-            <img src="./assets/icons/location.svg" alt="" width="16" style="position: absolute; top: 0; left: -22px;">
+            <img src="./assets/icons/location.svg" alt="" width="16" style="position: absolute; top: 0; left: 0;">
         </div>
     </div>
 
